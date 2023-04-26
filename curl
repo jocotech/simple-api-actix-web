@@ -1,0 +1,12 @@
+=== Health check
+curl --location --request GET 'http://localhost:8000/api/healthchecker'
+=== Create
+curl --location --request POST 'http://localhost:8000/api/todos' --header 'Content-Type: application/json' --data '{"title": "Title A",  "content": "Content A"}'
+=== Retrieve All
+curl --location --request GET 'http://localhost:8000/api/todos?page=1&limit=10'
+=== Retrieve By ID 
+curl --location --request GET 'http://localhost:8000/api/todos/24de5130-ae59-4c61-b613-019800870170'
+=== Update
+curl --location --request PATCH 'http://localhost:8000/api/todos/7e02e2dd-4de9-4b21-88cd-ef0d70754de7' --header 'Content-Type: application/json' --data-raw '{  "title": "Title NEW",  "content": “Content NEW”}'
+=== DELETE
+curl --location --request DELETE 'http://localhost:8000/api/todos/7e02e2dd-4de9-4b21-88cd-ef0d70754de7'
